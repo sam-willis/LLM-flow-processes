@@ -1,0 +1,42 @@
+*__pycache__
+.vscode
+.venv
+.mypy_cache
+.pytest_cache
+.aim
+.github
+.ipynb_checkpoints
+
+# wandb logging and cache directories
+
+wandb/
+# Scratch data stays ignored, but the NOAA source files in data/*.txt are
+# tracked -- the presets are generated from them. The directory itself must
+# NOT be excluded: git does not descend into an excluded directory, so a bare
+# `/data/` would make the `!` rules below unreachable.
+/data/*
+!/data/*.txt
+!/data/README.md
+artifacts/
+outputs/
+old_outputs/
+outputs*/
+workspace/
+figures/
+metric_scaling_cache/
+
+# a dummy file for trying out garbage
+*scratch.py
+llm_probs_cache*.pkl
+llm_io.log
+.jax_cache/
+*.eqx
+.claude/
+checkpoints/
+logs/
+notes/
+runs/
+draft/
+plots/
+tables/
+/*.tex
